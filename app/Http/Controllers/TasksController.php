@@ -15,10 +15,13 @@ class TasksController extends Controller
         return view('welcome', compact('tasks'));
     }
 
-    public function show($id)
+    public function show(Task $task)
     {
         //$task = DB::table('tasks')->find($id);
-        $task= Task::find($id);
+        //$task= Task::find($id);
+        return $task;
+        // If you want to see the json, just 'return $task'
+
         // You can use tasks/show too below
         return view('tasks.show', compact('task'));
     }
