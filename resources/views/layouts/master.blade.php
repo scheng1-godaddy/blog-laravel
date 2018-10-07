@@ -25,7 +25,7 @@
     <div class="container">
 
         <div class="row">
-            @include('posts.index')
+            @yield('content')
 
             @include('layouts.sidebar')
 
